@@ -168,3 +168,56 @@ header h1 {
         font-size: 14px;
     }
 }
+
+/* Follow Us Button Styles */
+.follow-us {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.telegram-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0088cc; /* Telegram color */
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.telegram-button:hover {
+    background-color: #007ab8; /* Darker shade for hover effect */
+}
+
+/* Autocomplete Styles */
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #ddd;
+    border-top: none;
+    z-index: 99;
+    background-color: #fff;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    top: calc(100% + 5px); /* Position below the search input */
+}
+
+.autocomplete-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.autocomplete-item:hover {
+    background-color: #f4f4f4;
+}
+
+/* Adjusting the search bar to work well with autocomplete */
+.search-bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 20px;
+}
