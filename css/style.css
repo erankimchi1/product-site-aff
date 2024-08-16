@@ -195,22 +195,27 @@ header h1 {
 .autocomplete-items {
     position: absolute;
     border: 1px solid #ddd;
-    border-top: none;
-    z-index: 99;
-    background-color: #fff;
-    max-height: 200px;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent background */
+    max-height: 150px;
     overflow-y: auto;
     width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 5px;
     top: calc(100% + 5px); /* Position below the search input */
 }
 
 .autocomplete-item {
     padding: 10px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 .autocomplete-item:hover {
-    background-color: #f4f4f4;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Adjusting the search bar to work well with autocomplete */
