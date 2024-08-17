@@ -11,6 +11,22 @@
     <!-- Header -->
     <header>
         <h1>Sales Product Website</h1>
+        <form action="add_product.php" method="post">
+          <label for="name">Product Name:</label>
+          <input type="text" id="name" name="name" required><br><br>
+      
+          <label for="image">Image URL:</label>
+          <input type="text" id="image" name="image" required><br><br>
+      
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" required></textarea><br><br>
+      
+          <label for="url">Product URL:</label>
+          <input type="text" id="url" name="url" required><br><br>
+      
+          <input type="submit" value="Add Product">
+      </form>
+      
     </header>
 
     <!-- Products Section -->
