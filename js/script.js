@@ -18,25 +18,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 productItem.className = 'product-item';
 
                 const productImage = document.createElement('img');
-                productImage.src = product.image;
+                const image_dir = "https://erankimchi1.github.io/product-site-aff/images/"
+                productImage.src =  image_dir + product.image;
                 productImage.alt = product.name;
-
                 const productName = document.createElement('h3');
                 productName.textContent = product.name;
-
-                const productDescription = document.createElement('p');
-                productDescription.textContent = product.description;
 
                 const buyNowLink = document.createElement('a');
                 buyNowLink.href = product.url;
                 buyNowLink.className = 'buy-now';
                 buyNowLink.target = '_blank';
                 buyNowLink.textContent = 'Buy Now';
-
                 // Append elements to the product item
                 productItem.appendChild(productImage);
                 productItem.appendChild(productName);
-                productItem.appendChild(productDescription);
                 productItem.appendChild(buyNowLink);
 
                 // Append the product item to the grid
