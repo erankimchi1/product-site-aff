@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const productGrid = document.querySelector('.product-grid');
-    const jsonFilePath = '../data/products.json'; // Correct path to products.json from the js directory
-    // const jsonFilePath = 'https://raw.githubusercontent.com/erankimchi1/product-site-aff/main/data/products.json'; // Raw URL of products.json
+    // const jsonFilePath = '../data/products.json'; // Correct path to products.json from the js directory
+    const jsonFilePath = 'https://raw.githubusercontent.com/erankimchi1/product-site-aff/main/data/products.json'; // Raw URL of products.json
 
     // Fetch products from the JSON file
     fetch(jsonFilePath)
