@@ -15,14 +15,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data
     $name = $_POST['name'];
     $image = $_POST['image'];
-    $description = $_POST['description'];
     $url = $_POST['url'];
 
     // Create a new product array
     $newProduct = [
         "name" => $name,
         "image" => $image,
-        "description" => $description,
         "url" => $url
     ];
 
