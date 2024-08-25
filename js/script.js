@@ -95,8 +95,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const productGrid = document.querySelector('.product-grid');
-    const jsonFilePath = '../data/products.json'; // Correct path to products.json from the js directory
-    // const jsonFilePath = 'https://raw.githubusercontent.com/erankimchi1/product-site-aff/main/data/products.json'; // Raw URL of products.json
+    // const jsonFilePath = '../data/products.json'; // Correct path to products.json from the js directory
+    const jsonFilePath = 'https://raw.githubusercontent.com/erankimchi1/product-site-aff/main/data/products.json'; // Raw URL of products.json
 
     // Fetch products from the JSON file
     fetch(jsonFilePath)
@@ -113,8 +113,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 productItem.className = 'product-item';
 
                 const productImage = document.createElement('img');
-                // const image_dir = "https://erankimchi1.github.io/product-site-aff/images/"
-                const image_dir = "/images/"
+                const image_dir = "https://erankimchi1.github.io/product-site-aff/images/"
+                // const image_dir = "/images/"
                 productImage.src =  image_dir + product.image;
                 productImage.alt = product.name;
                 const productName = document.createElement('h3');
