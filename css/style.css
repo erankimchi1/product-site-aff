@@ -81,7 +81,9 @@ header h1 {
 }
 
 .product-item:hover {
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
+    transform: scale(1.2);
+    z-index: 1;
 }
 
 .product-item img {
