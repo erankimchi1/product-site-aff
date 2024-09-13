@@ -93,6 +93,7 @@
 // //     });
 // // });
 
+
 document.addEventListener('DOMContentLoaded', function() {
     const productGrid = document.querySelector('.product-grid');
     const paginationContainer = document.getElementById('pagination');
@@ -138,6 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const productImage = document.createElement('img');
         const image_dir = "https://erankimchi1.github.io/product-site-aff/images/"
         // const image_dir = "/images/"
+
         productImage.src = image_dir + product.image;
         productImage.alt = product.name;
 
@@ -169,6 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentPage--;
                 renderProducts(currentPage);
                 updatePaginationButtons();
+                scrollToTop();
             }
         });
         paginationContainer.appendChild(prevButton);
@@ -181,6 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentPage = i;
                 renderProducts(currentPage);
                 updatePaginationButtons();
+                scrollToTop();
             });
             paginationContainer.appendChild(pageButton);
         }
@@ -193,6 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentPage++;
                 renderProducts(currentPage);
                 updatePaginationButtons();
+                scrollToTop();
             }
         });
         paginationContainer.appendChild(nextButton);
@@ -213,6 +218,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
     function initializeSearch(products) {
         const searchButton = document.getElementById('searchButton');
         const searchInput = document.getElementById('searchInput');
@@ -229,6 +241,7 @@ document.addEventListener('DOMContentLoaded', function() {
             currentPage = 1;
             renderProducts(currentPage);
             setupPagination();
+            scrollToTop();
         });
 
         searchInput.addEventListener('input', function() {
