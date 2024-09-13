@@ -229,3 +229,35 @@ header h1 {
     padding: 0 20px;
 }
 
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #16a085;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination button.active {
+    background-color: #16a085;
+    font-weight: bold;
+}
+
